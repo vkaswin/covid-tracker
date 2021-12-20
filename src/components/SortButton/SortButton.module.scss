@@ -1,0 +1,38 @@
+.sort_btn{
+  position: relative;
+  width: 120px;
+  button{
+    background-color: #766ceb;
+    border: none;
+    padding: 10px 0px;
+    color: white;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .sort_dropdown{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 5px;
+    width: max-content;
+    z-index: 100;
+    .dropdown_title{
+      color: #444;
+      font-size: 18px;
+    }
+  }
+  
+}
+
+.sort_btn[aria-hidden="false"]{
+  .sort_dropdown{
+    display: none;
+  }
+}
