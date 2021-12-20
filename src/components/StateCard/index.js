@@ -80,7 +80,7 @@ export const StateCard = ({
       });
       return dropDownValue ? true : false;
     }
-  }, [value]);
+  }, [state, value]);
 
   return (
     <div

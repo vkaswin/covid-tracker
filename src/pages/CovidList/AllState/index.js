@@ -132,6 +132,7 @@ const AllState = () => {
                 ? a.count?.districts[districtA?.value]?.total?.confirmed ?? 0
                 : a.count?.total?.confirmed ?? 0);
       });
+      console.log(sortData);
     } else if (key === "vaccinated" && dates === "") {
       sortData = stateData.sort((a, b) => {
         let districtA = dropdown.find((list) => {
@@ -204,7 +205,6 @@ const AllState = () => {
             ? b.count?.districts[districtB.value]?.meta?.population ?? 0
             : b.count?.meta?.population ?? 0;
         let percentB = (deceasedB / populationB) * 100;
-        console.log(percentA, a.state, percentB, b.state);
         return type === 0 ? percentA - percentB : percentB - percentA;
       });
     }
