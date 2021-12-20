@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[369],{9843:function(e,t,r){r.r(t),r.d(t,{useLocalStorage:function(){return o}});var o=function(){return{getItem:function(e){return JSON.parse(localStorage.getItem(e))},setItem:function(e){var t=e.key,r=void 0===t?"":t,o=e.value,c=void 0===o?"":o;localStorage.setItem(r,JSON.stringify(c))},removeItem:function(e){localStorage.removeItem(e)},reset:function(){localStorage.clear()}}}}}]);
+//# sourceMappingURL=hooks-useLocalStorage.ba36bc87.chunk.js.map

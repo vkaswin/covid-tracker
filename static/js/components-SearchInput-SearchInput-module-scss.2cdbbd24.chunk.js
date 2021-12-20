@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[68],{3339:function(c,e,t){t.r(e),e.default={search_input:"SearchInput_search_input__JIcts"}}}]);
+//# sourceMappingURL=components-SearchInput-SearchInput-module-scss.2cdbbd24.chunk.js.map

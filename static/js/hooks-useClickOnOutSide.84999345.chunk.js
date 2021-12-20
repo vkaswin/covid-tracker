@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[967],{6596:function(e,t,n){n.r(t),n.d(t,{useOnClickOutSide:function(){return u}});var r=n(2791),u=function(e,t){(0,r.useEffect)((function(){return document.addEventListener("touchstart",n),document.addEventListener("mousedown",n),function(){document.removeEventListener("touchstart",n),document.removeEventListener("mousedown",n)}}),[]);var n=function(n){var r=n.target;e.current&&!e.current.contains(r)&&t()}}}}]);
+//# sourceMappingURL=hooks-useClickOnOutSide.84999345.chunk.js.map

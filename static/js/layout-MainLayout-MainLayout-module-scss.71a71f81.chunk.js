@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[255],{3034:function(t,a,e){e.r(a),a.default={main_container:"MainLayout_main_container__tmCU4",page_title:"MainLayout_page_title__pthEY"}}}]);
+//# sourceMappingURL=layout-MainLayout-MainLayout-module-scss.71a71f81.chunk.js.map

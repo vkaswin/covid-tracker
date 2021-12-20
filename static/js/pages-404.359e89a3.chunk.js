@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[751],{7391:function(e,c,r){r.r(c);r(2791);var n=r(184);c.default=function(){return(0,n.jsx)("h1",{children:"Page Not Found"})}}}]);
+//# sourceMappingURL=pages-404.359e89a3.chunk.js.map
