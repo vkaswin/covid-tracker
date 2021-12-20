@@ -5,27 +5,26 @@
   gap: 10px;
   min-width: 100%;
   color: #444;
-  b{
-    font-size: 22px;
+  b {
+    font-size: 18px;
   }
-  .stats_count_wrapper{
+  .stats_count_wrapper {
     width: 100%;
     .stats_count {
       display: flex;
-      font-size: 20px;
-      span:nth-child(1){
+      font-size: 16px;
+      span:nth-child(1) {
         width: 45%;
         text-align: right;
       }
-      span:nth-child(2){
+      span:nth-child(2) {
         width: 10%;
         text-align: center;
       }
-      span:nth-child(3){
+      span:nth-child(3) {
         width: 45%;
         text-align: left;
       }
     }
   }
-  
 }
