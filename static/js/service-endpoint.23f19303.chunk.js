@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[33],{8278:function(n,t,c){c.r(t),c.d(t,{endpoints:function(){return a}});var i="https://data.covid19india.org/v4/min",a={GET_ALL_LIST:"".concat(i,"/data.min.json"),GET_LIST_BY_DATE:"".concat(i,"/timeseries.min.json")}}}]);
+//# sourceMappingURL=service-endpoint.23f19303.chunk.js.map
