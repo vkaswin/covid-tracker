@@ -115,7 +115,7 @@ const AllState = () => {
         });
         let districtB = dropdown.find((list) => {
           return (
-            list.state === b.state && !Object.keys(stateCode).includes(a.state)
+            list.state === b.state && !Object.keys(stateCode).includes(b.state)
           );
         });
         return type === 0
