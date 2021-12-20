@@ -74,7 +74,7 @@ const StateByDate = () => {
       sort !== "" && sortByFilter(sort, list);
       setLoading(false);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
 

@@ -58,7 +58,6 @@ const AllState = () => {
       setStateList(stateData);
       let sort = getItem("sortList") ?? "";
       let date = getItem("listDate") ?? "";
-      console.log(data);
       date !== "" && sort === "" && sortByDate(date, false, dateList);
       sort !== "" && date === "" && sortByFilter(sort, stateData, date);
       date !== "" && sort !== "" && sortByDate(date, true, sort, dateList);
