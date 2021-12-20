@@ -59,7 +59,7 @@ const AllState = () => {
       let sort = getItem("sortList") ?? "";
       let date = getItem("listDate") ?? "";
       date !== "" && sort === "" && sortByDate(date, false, dateList);
-      sort !== "" && date === "" && sortByFilter(false, sort, stateData, date);
+      sort !== "" && date === "" && sortByFilter(sort, stateData, date);
       date !== "" && sort !== "" && sortByDate(date, true, sort, dateList);
       setLoading(false);
     } catch (error) {
@@ -79,7 +79,7 @@ const AllState = () => {
         count: dates[date] ?? {},
       };
     });
-    isSortByFilter && sortByFilter(false, sort, stateByDates, date);
+    isSortByFilter && sortByFilter(sort, stateByDates, date);
     setStateList(stateByDates);
     setDates(date);
   };
@@ -93,15 +93,10 @@ const AllState = () => {
   const handleSort = (event) => {
     const { value } = event.target;
     setItem({ key: "sortList", value });
-    sortByFilter(false, value);
+    sortByFilter(value);
   };
 
-  const sortByFilter = (
-    isSelectChange = false,
-    value,
-    stateData = stateList,
-    date = dates
-  ) => {
+  const sortByFilter = (value, stateData = stateList, date = dates) => {
     let dropdown = getItem("dropdown") ?? [];
     let type = parseInt(String(value).split("-")[1]);
     let key = String(value).split("-")[0];
@@ -132,7 +127,6 @@ const AllState = () => {
                 ? a.count?.districts[districtA?.value]?.total?.confirmed ?? 0
                 : a.count?.total?.confirmed ?? 0);
       });
-      console.log(sortData);
     } else if (key === "vaccinated" && dates === "") {
       sortData = stateData.sort((a, b) => {
         let districtA = dropdown.find((list) => {
@@ -210,7 +204,6 @@ const AllState = () => {
     }
     setStateList(sortData);
     setSortValue(value);
-    isSelectChange && setSelectValue(Math.random());
   };
 
   let searchQuery = String(searchValue).trim();
@@ -273,7 +266,6 @@ const AllState = () => {
                 stateDelta={delta}
                 districtOptions={districtOptions}
                 showDropDown={true}
-                onChange={(e) => sortByFilter(e, sortValue)}
               />
             );
           })}

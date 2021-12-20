@@ -58,7 +58,6 @@ export const StateCard = ({
       setItem({ key: "dropdown", value: arr });
     }
     setValue(value);
-    getItem("sortList") && onChange(true);
   };
 
   const handleSlide = (isNext) => {
