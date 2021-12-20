@@ -58,6 +58,7 @@ const AllState = () => {
       setStateList(stateData);
       let sort = getItem("sortList") ?? "";
       let date = getItem("listDate") ?? "";
+      console.log(data);
       date !== "" && sort === "" && sortByDate(date, false, dateList);
       sort !== "" && date === "" && sortByFilter(sort, stateData, date);
       date !== "" && sort !== "" && sortByDate(date, true, sort, dateList);
@@ -127,7 +128,7 @@ const AllState = () => {
                 ? a.count?.districts[districtA?.value]?.total?.confirmed ?? 0
                 : a.count?.total?.confirmed ?? 0);
       });
-    } else if (key === "vaccinated" && dates === "") {
+    } else if (key === "vaccinated" && date === "") {
       sortData = stateData.sort((a, b) => {
         let districtA = dropdown.find((list) => {
           return (
@@ -169,7 +170,7 @@ const AllState = () => {
         let percentB = (vaccinatedB / populationB) * 100;
         return type === 0 ? percentA - percentB : percentB - percentA;
       });
-    } else if (key === "affected" && dates === "") {
+    } else if (key === "affected" && date === "") {
       sortData = stateData.sort((a, b) => {
         let districtA = dropdown.find((list) => {
           return (
