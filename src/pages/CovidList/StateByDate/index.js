@@ -4,7 +4,7 @@ import { useLocalStorage } from "hooks";
 import { Loader } from "components/Loader";
 import { Pagination } from "components/Pagination";
 import { SortButton } from "components/SortButton";
-import axios from "axios";
+import { getAllList, getListByDate } from "service/api";
 import { stateCode } from "helpers";
 
 import styles from "./StateByDate.module.scss";
@@ -17,7 +17,7 @@ const StateByDate = () => {
 
   const navigate = useNavigate();
 
-  const { getItem, setItem, removeItem } = useLocalStorage();
+  const { getItem, setItem } = useLocalStorage();
 
   const [date, setDate] = useState("");
 
@@ -51,14 +51,8 @@ const StateByDate = () => {
 
   const getStateByDateList = async () => {
     try {
-      let { data } = await axios({
-        method: "get",
-        url: "https://data.covid19india.org/v4/min/timeseries.min.json",
-      });
-      let { data: allState } = await axios({
-        method: "get",
-        url: "https://data.covid19india.org/v4/min/data.min.json",
-      });
+      let { data } = await getListByDate();
+      let { data: allState } = await getAllList();
       let [
         ,
         {
@@ -96,8 +90,6 @@ const StateByDate = () => {
       navigate(`${pathname}`);
     }
   };
-
- 
 
   const handleSort = (event) => {
     const { value } = event.target;

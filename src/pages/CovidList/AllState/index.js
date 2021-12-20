@@ -8,14 +8,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { debounce } from "helpers";
 import { stateCode } from "helpers";
 import { useLocalStorage } from "hooks";
-import axios from "axios";
+import { getAllList, getListByDate } from "service/api";
 
 import styles from "./AllState.module.scss";
 
 const AllState = () => {
   const { search } = useLocation();
 
-  const { getItem, setItem, removeItem } = useLocalStorage();
+  const { getItem, setItem } = useLocalStorage();
 
   const navigate = useNavigate();
 
@@ -45,14 +45,8 @@ const AllState = () => {
 
   const getStateList = async () => {
     try {
-      let { data } = await axios({
-        method: "get",
-        url: "https://data.covid19india.org/v4/min/data.min.json",
-      });
-      let { data: dateList } = await axios({
-        method: "get",
-        url: "https://data.covid19india.org/v4/min/timeseries.min.json",
-      });
+      let { data } = await getAllList();
+      let { data: dateList } = await getListByDate();
       let stateData = Object.entries(data)
         .map(([code, count]) => {
           return { state: stateCode[code] ?? code, count };

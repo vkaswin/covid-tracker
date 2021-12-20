@@ -1,7 +1,7 @@
-.sort_btn{
+.sort_btn {
   position: relative;
   width: 120px;
-  button{
+  button {
     background-color: #766ceb;
     border: none;
     padding: 10px 0px;
@@ -12,7 +12,7 @@
     font-size: 17px;
     cursor: pointer;
   }
-  .sort_dropdown{
+  .sort_dropdown {
     position: absolute;
     left: 0;
     padding: 10px;
@@ -23,16 +23,15 @@
     margin-top: 5px;
     width: max-content;
     z-index: 100;
-    .dropdown_title{
+    .dropdown_title {
       color: #444;
       font-size: 18px;
     }
   }
-  
 }
 
-.sort_btn[aria-hidden="false"]{
-  .sort_dropdown{
+.sort_btn[aria-hidden="false"] {
+  .sort_dropdown {
     display: none;
   }
 }

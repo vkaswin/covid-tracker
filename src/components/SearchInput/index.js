@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import styles from "./SearchInput.module.scss";
 
 export const SearchInput = ({ onChange, value, placeholder }) => {

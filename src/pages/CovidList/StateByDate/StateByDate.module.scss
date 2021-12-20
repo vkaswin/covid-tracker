@@ -53,17 +53,18 @@
           }
           &:first-child {
             padding-left: 10px;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 6px;
+              height: 100%;
+              background-color: #766ceb;
+              border-radius: 0px 4px 4px 0px;
+            }
           }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 6px;
-          height: 100%;
-          background-color: #766ceb;
-          border-radius: 0px 4px 4px 0px;
         }
       }
     }
@@ -80,11 +81,11 @@
   gap: 20px;
 }
 
-@media only screen and (max-width: 600px){
-  .detial_filter{
+@media only screen and (max-width: 600px) {
+  .detial_filter {
     flex-direction: column;
     align-items: flex-start;
-    input[type="date"]{
+    input[type="date"] {
       max-width: 200px;
     }
   }
