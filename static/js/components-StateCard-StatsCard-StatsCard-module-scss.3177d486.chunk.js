@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[622],{3205:function(t,a,s){s.r(a),a.default={stats_detail:"StatsCard_stats_detail__v-0q0",stats_count_wrapper:"StatsCard_stats_count_wrapper__rD+z8",stats_count:"StatsCard_stats_count__WShfc"}}}]);
+//# sourceMappingURL=components-StateCard-StatsCard-StatsCard-module-scss.3177d486.chunk.js.map

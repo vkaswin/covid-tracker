@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[977],{9646:function(n,a,i){i.r(a),a.default={pagination_container:"Pagination_pagination_container__59-zd",page_btn:"Pagination_page_btn__b+vWM",pagination_next:"Pagination_pagination_next__HgofK",pagination_prev:"Pagination_pagination_prev__LeGkt"}}}]);
+//# sourceMappingURL=components-Pagination-Pagination-module-scss.a0a9bc77.chunk.js.map

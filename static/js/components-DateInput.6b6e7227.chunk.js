@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[506,721],{8235:function(e,t,a){a.r(t),a.d(t,{DateInput:function(){return r}});a(2791);var n=a(310),u=a(184),r=function(e){var t=e.value,a=e.onChange;return(0,u.jsx)("input",{className:n.default.date_field,type:"date",value:t,max:(new Date).toISOString().split("T")[0],onChange:a})}},310:function(e,t,a){a.r(t),t.default={date_field:"DateInput_date_field__wpuv5"}}}]);
+//# sourceMappingURL=components-DateInput.6b6e7227.chunk.js.map

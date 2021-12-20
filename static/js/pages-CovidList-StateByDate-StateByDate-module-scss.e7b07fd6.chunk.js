@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[122],{502:function(t,e,a){a.r(e),e.default={table_wrapper:"StateByDate_table_wrapper__MfAcG",date_table:"StateByDate_date_table__TQHow",pagination_box:"StateByDate_pagination_box__sIZyj",detial_filter:"StateByDate_detial_filter__tZ5C8"}}}]);
+//# sourceMappingURL=pages-CovidList-StateByDate-StateByDate-module-scss.e7b07fd6.chunk.js.map

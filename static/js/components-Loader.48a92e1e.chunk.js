@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[781,604],{2881:function(r,n,c){c.r(n),c.d(n,{Loader:function(){return u}});c(2791),c(4714);var e=c(184),u=function(){return(0,e.jsx)("div",{className:"lds-dual-ring"})}},4714:function(r,n,c){c.r(n),n.default={}}}]);
+//# sourceMappingURL=components-Loader.48a92e1e.chunk.js.map
