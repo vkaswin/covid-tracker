@@ -72,9 +72,10 @@ const StateByDate = () => {
       setTotalPages(Math.ceil(list.length / 10));
       let sort = getItem("sortTable") ?? "";
       sort !== "" && sortByFilter(sort, list);
-      setLoading(false);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 

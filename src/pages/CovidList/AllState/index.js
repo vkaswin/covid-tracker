@@ -23,25 +23,29 @@ const AllState = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const [searchValue, setSearchValue] = useState();
-
   const [sortValue, setSortValue] = useState();
-
-  const [selectValue, setSelectValue] = useState();
 
   const [dateWiseList, setDateWiseList] = useState();
 
   const [dates, setDates] = useState("");
 
-  const q = new URLSearchParams(search).get("q");
+  const searchQuery = new URLSearchParams(search).get("q") ?? "";
 
   useEffect(() => {
     getStateList();
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
-  useEffect(() => {
-    setSearchValue(q ?? "");
-  }, [search]);
+  const handleKeyDown = (event) => {
+    const { ctrlKey, keyCode } = event;
+    if (ctrlKey && keyCode === 70) {
+      event.preventDefault();
+      document.getElementById("search-input").focus();
+    }
+  };
 
   const getStateList = async () => {
     try {
@@ -61,9 +65,10 @@ const AllState = () => {
       date !== "" && sort === "" && sortByDate(date, false, dateList);
       sort !== "" && date === "" && sortByFilter(sort, stateData, date);
       date !== "" && sort !== "" && sortByDate(date, true, sort, dateList);
-      setLoading(false);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -206,25 +211,21 @@ const AllState = () => {
     setSortValue(value);
   };
 
-  let searchQuery = String(searchValue).trim();
-
   const covidList = useMemo(() => {
-    return searchQuery.length === 0
+    return searchQuery.trim().length === 0
       ? stateList
       : stateList.filter(({ state }) => {
           return String(state)
             .toLowerCase()
-            .includes(String(searchQuery).toLowerCase());
+            .includes(String(searchQuery.trim()).toLowerCase());
         });
-  }, [searchValue, stateList, sortValue, selectValue, dates]);
+  }, [searchQuery, stateList, sortValue, dates]);
 
   const handleDate = (event) => {
     const { value } = event.target;
     setItem({ key: "listDate", value });
     sortByDate(value, sortValue === "" ? false : true, sortValue);
   };
-
-  if (stateList === null) return <Loader />;
 
   return (
     <Fragment>
@@ -233,7 +234,7 @@ const AllState = () => {
           <span>States</span>
           <SearchInput
             placeholder="Search by state name"
-            value={searchValue}
+            value={searchQuery}
             onChange={debounce(handleSearch, 500)}
           />
         </div>
