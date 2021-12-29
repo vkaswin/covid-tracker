@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { ErrorBoundary } from "components/ErrorBoundary";
 import { Router } from "router";
 import reportWebVitals from "./reportWebVitals";
 
@@ -7,7 +8,9 @@ import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ErrorBoundary>
+      <Router />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById("root")
 );
