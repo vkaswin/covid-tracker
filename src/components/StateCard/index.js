@@ -12,8 +12,6 @@ export const StateCard = ({
   stateTotal,
   stateDelta,
   stateDelta7,
-  onChange,
-  showDropDown,
 }) => {
   const { getItem, setItem } = useLocalStorage();
 
@@ -88,7 +86,7 @@ export const StateCard = ({
     >
       <div className={styles.card_head}>
         <b>{state}</b>
-        {districtOptions.length > 0 && showDropDown && (
+        {districtOptions.length > 0 && (
           <select
             value={value}
             onChange={handleDropDown}

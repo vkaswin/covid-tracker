@@ -266,7 +266,6 @@ const AllState = () => {
                 stateDelta7={delta7}
                 stateDelta={delta}
                 districtOptions={districtOptions}
-                showDropDown={true}
               />
             );
           })}
