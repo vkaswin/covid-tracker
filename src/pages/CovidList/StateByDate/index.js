@@ -51,8 +51,10 @@ const StateByDate = () => {
 
   const getStateByDateList = async () => {
     try {
-      let { data } = await getListByDate();
-      let { data: allState } = await getAllList();
+      let [{ data: allState }, { data }] = await Promise.all([
+        getAllList(),
+        getListByDate(),
+      ]);
       let [
         ,
         {

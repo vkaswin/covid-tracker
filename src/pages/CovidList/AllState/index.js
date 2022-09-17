@@ -49,8 +49,10 @@ const AllState = () => {
 
   const getStateList = async () => {
     try {
-      let { data } = await getAllList();
-      let { data: dateList } = await getListByDate();
+      let [{ data }, { data: dateList }] = await Promise.all([
+        getAllList(),
+        getListByDate(),
+      ]);
       let stateData = Object.entries(data)
         .map(([code, count]) => {
           return { state: stateCode[code] ?? code, count };
