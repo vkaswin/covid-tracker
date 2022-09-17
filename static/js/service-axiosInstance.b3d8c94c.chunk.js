@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcovid_tracker=self.webpackChunkcovid_tracker||[]).push([[945],{8176:function(e,r,n){n.r(r),n.d(r,{axiosIntance:function(){return s}});var t=n(4569),s=n.n(t)().create();s.interceptors.request.use((function(e){return e}),(function(e){return Promise.reject(e)})),s.interceptors.response.use((function(e){return e}),(function(e){return e.response.status,Promise.reject(e.response)}))}}]);
+//# sourceMappingURL=service-axiosInstance.b3d8c94c.chunk.js.map
