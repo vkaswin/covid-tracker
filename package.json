@@ -1,6 +1,6 @@
 {
     "name": "covid-tracker",
-    "homepage": "https://vkaswin.github.io/covid-tracker-react",
+    "homepage": "https://vkaswin.github.io/covid-tracker",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
